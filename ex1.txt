@@ -1,0 +1,198 @@
+
+ILYES@ILYES MINGW64 /f
+$ mkdir learn_git
+
+ILYES@ILYES MINGW64 /f
+$ cd learn_git
+
+ILYES@ILYES MINGW64 /f/learn_git
+$ touch third.txt
+
+ILYES@ILYES MINGW64 /f/learn_git
+$ git init
+Initialized empty Git repository in F:/learn_git/.git/
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git add third.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git commit "adding third.txt"
+error: pathspec 'adding third.txt' did not match any file(s) known to git
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git commit m-"adding third.txt"
+error: pathspec 'm-adding third.txt' did not match any file(s) known to git
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) edd79b0] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git log
+commit edd79b0e603ee5001e970bb20ce5cda246d49597 (HEAD -> master)
+Author: Mohammed Ilyes kraiem <ilyeskraiemilyes@gmail.com>
+Date:   Wed Sep 17 18:25:18 2025 +0100
+
+    adding third.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ touch fourth.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git add fourth.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git commit -m"adding fourth.txt"
+[master 70c4125] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git rm third.txt
+rm 'third.txt'
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ ls
+fourth.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git add .
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git commit -m "removing third.txt"
+[master 50dfb43] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git log.
+git: 'log.' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git log
+commit 50dfb433dda024ed805b2adf36370e52e4461af6 (HEAD -> master)
+Author: Mohammed Ilyes kraiem <ilyeskraiemilyes@gmail.com>
+Date:   Wed Sep 17 19:28:30 2025 +0100
+
+    removing third.txt
+
+commit 70c41250cd15413c8208306b36cc48bf712bcb07
+Author: Mohammed Ilyes kraiem <ilyeskraiemilyes@gmail.com>
+Date:   Wed Sep 17 19:20:12 2025 +0100
+
+    adding fourth.txt
+
+commit edd79b0e603ee5001e970bb20ce5cda246d49597
+Author: Mohammed Ilyes kraiem <ilyeskraiemilyes@gmail.com>
+Date:   Wed Sep 17 18:25:18 2025 +0100
+
+    adding third.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ echo "Ilyes" > XD.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ ls
+XD.txt  fourth.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ cat XD.txt
+Ilyes
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git config --global
+error: no action specified
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git config --global core.pager "cat"
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git config --global --list
+user.email=ilyeskraiemilyes@gmail.com
+user.name=Mohammed Ilyes kraiem
+core.pager=cat
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git config --global
+error: no action specified
+
+ILYES@ILYES MINGW64 /f/learn_git (master)
+$ git checkout -b git
+Switched to a new branch 'git'
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+$ ls
+XD.txt  fourth.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+$ git status
+On branch git
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        XD.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+$ rm XD
+rm: cannot remove 'XD': No such file or directory
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+$ rm XD.txt
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+$ ^C
+
+ILYES@ILYES MINGW64 /f/learn_git (git)
+
