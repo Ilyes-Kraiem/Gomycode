@@ -1,0 +1,29 @@
+Var
+    L : integer
+    NW : integer
+    NV : integer
+    i : integer
+    ch : array of characters
+
+Begin
+    L := 0
+    NW := 1
+    NV := 0
+    i := 0
+
+    repeat
+        i := i + 1
+
+        if ch[i] = " " then
+            NW := NW + 1
+        else if ch[i] ∈ ["o","i","y","e","a","u"] then
+            NV := NV + 1
+        end if
+
+        if ch[i] ≠ " " and ch[i] ≠ "." then
+            L := L + 1
+        end if
+
+    until ch[i] = "."
+
+End
