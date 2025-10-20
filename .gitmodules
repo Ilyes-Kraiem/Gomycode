@@ -1,0 +1,6 @@
+[submodule "external/angular"]
+	path = external/angular
+	url = https://github.com/Ilyes-Kraiem/angular.git
+[submodule "external/store-clothes"]
+	path = external/store-clothes
+	url = https://github.com/Ilyes-Kraiem/store-clothes.git
