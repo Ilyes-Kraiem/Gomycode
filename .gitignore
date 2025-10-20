@@ -1,0 +1,10 @@
+# OS/user junk
+Desktop/
+AppData/
+Thumbs.db
+.DS_Store
+
+# Common deps
+node_modules/
+dist/
+build/
