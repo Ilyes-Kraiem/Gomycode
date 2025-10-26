@@ -1,200 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nova – Modern Store</title>
-
-  <!--
-    Project: Responsive Store Landing Page
-    Author: ChatGPT (for the user)
-    Notes:
-      - Clean, commented, accessible HTML structure
-      - Mobile‑first responsive CSS in styles.css
-      - Header with navigation, Product section (4+ cards), Footer
-      - Uses semantic tags and aria attributes
-  -->
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ilyes Kraiem — Frontend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <!-- Logo -->
-      <a class="logo" href="#top" aria-label="Nova Home">
-        <!-- Simple SVG logo for visual polish, no external libs -->
-        <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" fill="currentColor" opacity="0.12"></path>
-          <path d="M12 4l7 3.89v7.96L12 20l-7-4.15V7.89L12 4z" fill="currentColor"></path>
-        </svg>
-        <span class="logo-text">Nova</span>
-      </a>
-
-      <!-- Mobile nav toggle (checkbox hack, no JS required) -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-      <label for="nav-toggle" class="hamburger" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-
-      <!-- Navigation -->
-      <nav class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a class="btn btn-primary" href="#products">Shop Now</a></li>
-        </ul>
-      </nav>
+  <main class="hero" aria-labelledby="intro-title">
+    <div class="card">
+      <h1 id="intro-title">Mohamed Ilyess Kraiem</h1>
+      <p class="subtitle">
+        Frontend Developer — building delightful, fast web experiences.
+      </p>
+      <div class="actions">
+        <a
+          id="view-projects"
+          class="btn btn-primary"
+          href="https://github.com/Ilyes-Kraiem?tab=repositories"
+          target="_blank"
+          rel="noopener"
+          aria-label="View my projects on GitHub"
+        >
+          View My Projects
+          <span class="btn-glow" aria-hidden="true"></span>
+        </a>
+        <button id="theme-toggle" class="btn btn-ghost" type="button" aria-pressed="false" aria-label="Toggle theme">
+          Toggle Theme
+        </button>
+      </div>
     </div>
-
-    <!-- Optional hero inside header for visual appeal -->
-    <section class="hero container">
-      <div class="hero-text">
-        <h1>Your Everyday Essentials, Reimagined</h1>
-        <p>Quality gear built to last. Thoughtful design, fair pricing, fast delivery.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#products" aria-label="Shop featured products now">Shop Featured</a>
-          <a class="btn btn-ghost" href="#about">Learn More</a>
-        </div>
-      </div>
-      <figure class="hero-art" aria-hidden="true">
-        <!-- Placeholder image (royalty‑free placeholder service). Replace with real hero later. -->
-        <img src="./online store cover picture.jpg" alt="online store cover picture" loading="lazy">
-      </figure>
-    </section>
-  </header>
-
-  <main id="top">
-    <!-- ===== Product Section ===== -->
-    <section id="products" class="products-section container">
-      <header class="section-head">
-        <h2>Featured Products</h2>
-        <p class="muted">Carefully selected bestsellers. Tap any card to learn more.</p>
-      </header>
-
-      <!-- Product grid: minimum 4 cards -->
-      <div class="product-grid">
-        <!-- Product Card 1 -->
-        <article class="product-card">
-          <a class="product-media" href="#" aria-label="View Minimal Daypack">
-            <img src="./Minimal Daypack.jpg" alt="Minimal Daypack" loading="lazy">
-          </a>
-          <div class="product-body">
-            <h3 class="product-title">Minimal Daypack</h3>
-            <p class="product-desc">Lightweight, water‑resistant daily carry with smart pockets.</p>
-          </div>
-          <div class="product-actions">
-            <a href="#" class="btn btn-primary" aria-label="Shop Minimal Daypack now">Shop Now</a>
-          </div>
-        </article>
-
-        <!-- Product Card 2 -->
-        <article class="product-card">
-          <a class="product-media" href="#" aria-label="View Everyday Bottle">
-            <img src="./daily bottle.webp" alt="Everyday Bottle" loading="lazy">
-          </a>
-          <div class="product-body">
-            <h3 class="product-title">Everyday Bottle</h3>
-            <p class="product-desc">Insulated stainless steel keeps drinks hot or cold for hours.</p>
-          </div>
-          <div class="product-actions">
-            <a href="#" class="btn btn-primary" aria-label="Shop Everyday Bottle now">Shop Now</a>
-          </div>
-        </article>
-
-        <!-- Product Card 3 -->
-        <article class="product-card">
-          <a class="product-media" href="#" aria-label="View Compact Wallet">
-            <img src="./Compact Wallet.webp" alt="Compact Wallet" loading="lazy">
-          </a>
-          <div class="product-body">
-            <h3 class="product-title">Compact Wallet</h3>
-            <p class="product-desc">Slim profile leather wallet with RFID protection.</p>
-          </div>
-          <div class="product-actions">
-            <a href="#" class="btn btn-primary" aria-label="Shop Compact Wallet now">Shop Now</a>
-          </div>
-        </article>
-
-        <!-- Product Card 4 -->
-        <article class="product-card">
-          <a class="product-media" href="#" aria-label="View Wireless Buds">
-            <img src="./Wireless Buds.jpg" alt="Wireless Buds" loading="lazy">
-          </a>
-          <div class="product-body">
-            <h3 class="product-title">Wireless Buds</h3>
-            <p class="product-desc">Active noise cancelation and all‑day battery life.</p>
-          </div>
-          <div class="product-actions">
-            <a href="#" class="btn btn-primary" aria-label="Shop Wireless Buds now">Shop Now</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== About (placeholder content per requirements) ===== -->
-    <section id="about" class="about-section container">
-      <header class="section-head">
-        <h2>About Nova</h2>
-        <p class="muted">Design‑first, planet‑minded, customer‑obsessed.</p>
-      </header>
-      <div class="about-grid">
-        <p>
-          We build durable essentials that look great and work even better. Our products
-          are produced in small batches with responsible materials and fair labor. We
-          partner with vetted suppliers and offset all deliveries to reduce our footprint.
-        </p>
-        <p>
-          Swap any product within 30 days, no questions asked. Our support team is real
-          humans based in your region, ready to help by chat or email.
-        </p>
-      </div>
-    </section>
   </main>
-
-  <!-- ===== Footer ===== -->
-  <footer id="contact" class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="logo" href="#top" aria-label="Back to top">
-          <svg class="logo-mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" fill="currentColor" opacity="0.12"></path>
-            <path d="M12 4l7 3.89v7.96L12 20l-7-4.15V7.89L12 4z" fill="currentColor"></path>
-          </svg>
-          <span class="logo-text">Nova</span>
-        </a>
-        <p class="muted">© <span id="year"></span> Nova Goods. All rights reserved.</p>
-      </div>
-      <nav aria-label="Footer">
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Returns</a></li>
-        </ul>
-      </nav>
-      <div class="footer-social">
-        <a href="#" aria-label="Follow on Instagram" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 2.2a2.8 2.8 0 1 0 0 5.6a2.8 2.8 0 0 0 0-5.6zM18 6.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
-        </a>
-        <a href="#" aria-label="Follow on Twitter" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 5.8c-.7.3-1.5.6-2.2.7c.8-.5 1.4-1.2 1.7-2.1c-.7.5-1.6.8-2.4 1c-.7-.7-1.7-1.1-2.7-1.1c-2.2 0-3.8 2-3.3 4.1c-3-.2-5.6-1.6-7.3-3.8c-1 1.8-.5 4.2 1.2 5.3c-.6 0-1.2-.2-1.7-.5c0 2 1.4 3.7 3.3 4.1c-.6.2-1.2.2-1.7.1c.5 1.6 2 2.8 3.8 2.9c-1.7 1.3-3.9 2-6.1 1.8c1.8 1.2 4 1.9 6.4 1.9c7.7 0 12-6.6 11.7-12.5c.8-.6 1.4-1.3 1.9-2.1z"/></svg>
-        </a>
-        <a href="#" aria-label="Connect on LinkedIn" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h14zM8.3 10.2H6V18h2.3v-7.8zM7.1 6c-.8 0-1.4.6-1.4 1.3c0 .7.6 1.3 1.4 1.3c.8 0 1.4-.6 1.4-1.3c0-.7-.6-1.3-1.4-1.3zM18 18v-4.1c0-2.2-1.2-3.2-2.7-3.2c-1.2 0-1.8.7-2.1 1.2h-.1v-1H11V18h2.2v-4c0-1 .2-1.9 1.4-1.9c1.2 0 1.3 1.1 1.3 2V18H18z"/></svg>
-        </a>
-      </div>
-    </div>
+  <footer class="footer">
+    <small>© <span id="year"></span>Mohamed Ilyess Kraiem. All rights reserved.</small>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
