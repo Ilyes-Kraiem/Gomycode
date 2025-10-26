@@ -1,25 +1,14 @@
-/* =======================================================================
-   Responsive Store Landing Page Styles (Mobile-first)
-   -----------------------------------------------------------------------
-   - Clean, modern look with CSS variables
-   - Accessible focus states
-   - Responsive layout with media queries
-   - No external CSS frameworks (you can add Bootstrap/Tailwind for extra credit)
-   ======================================================================= */
-
-/* ---- CSS Variables & Reset ---- */
 :root{
-  --bg: #0f172a;       /* deep slate */
-  --card: #0b1220;     /* slightly lighter */
-  --surface: #111a2e;  /* panels */
-  --text: #e7eefc;     /* soft white */
-  --muted: #9db3d6;    /* soft steel */
-  --brand: #3b82f6;    /* blue */
-  --brand-2: #22c55e;  /* green */
+  --bg: #0f172a;      
+  --card: #0b1220;    
+  --surface: #111a2e; 
+  --text: #e7eefc;     
+  --muted: #9db3d6;   
+  --brand: #3b82f6;    
+  --brand-2: #22c55e; 
   --border: #1e2a44;
   --ring: #7aa2ff;
 }
-
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -31,15 +20,11 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
-
-/* ---- Utilities ---- */
 .container {
   width: min(1100px, 92%);
   margin-inline: auto;
 }
-
 .muted { color: var(--muted); }
-
 .btn {
   display: inline-block;
   padding: 0.75rem 1.1rem;
@@ -61,29 +46,23 @@ body {
   border-color: #28406e;
 }
 .btn-ghost:hover { background: #0c1630; }
-
-/* Focus rings for accessibility */
 a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visible, .nav-toggle:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
   border-radius: 6px;
 }
-
-/* ---- Header ---- */
 .site-header {
   position: relative;
   padding-top: .6rem;
   padding-bottom: 1.25rem;
   background: transparent;
 }
-
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
-
 .logo {
   display: inline-flex;
   align-items: center;
@@ -95,10 +74,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
 }
 .logo .logo-mark { color: var(--brand); }
 .logo .logo-text { font-size: 1.1rem; }
-
-/* ---- Navigation (mobile-first) ---- */
 .nav-toggle { display: none; }
-
 .hamburger {
   display: inline-flex;
   flex-direction: column;
@@ -111,8 +87,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   display: block;
   transition: transform .2s ease, opacity .2s ease;
 }
-
-/* Hidden nav by default on mobile */
 .site-nav {
   position: absolute;
   top: 60px;
@@ -141,15 +115,10 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   text-decoration: none;
 }
 .site-nav a:hover { background: #0e1a32; }
-
-/* Toggle open */
 .nav-toggle:checked ~ .site-nav { display: block; }
-/* Hamburger animation when open */
 .nav-toggle:checked + .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle:checked + .hamburger span:nth-child(2) { opacity: 0; }
 .nav-toggle:checked + .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ---- Hero ---- */
 .hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -173,8 +142,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   border: 1px solid var(--border);
   box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
-
-/* ---- Sections ---- */
 .section-head {
   margin-bottom: .8rem;
 }
@@ -183,8 +150,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   margin: 0 0 .25rem 0;
   letter-spacing: .2px;
 }
-
-/* ---- Products ---- */
 .products-section {
   padding: 2rem 0 2.2rem 0;
 }
@@ -215,8 +180,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
 .product-title { margin: 0 0 .25rem 0; font-size: 1.05rem; }
 .product-desc { margin: 0; color: var(--muted); }
 .product-actions { padding: .9rem; }
-
-/* ---- About ---- */
 .about-section {
   padding: 2rem 0 2.6rem 0;
 }
@@ -229,8 +192,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   border-radius: 16px;
   padding: 1rem;
 }
-
-/* ---- Footer ---- */
 .site-footer {
   margin-top: 1rem;
   padding: 1.6rem 0 2.2rem 0;
@@ -265,9 +226,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   opacity: .9; text-decoration: none; color: var(--text);
 }
 .social-link:hover { background: #0e1a32; }
-
-/* ---- Media Queries ---- */
-/* ≥ 600px (small tablets) */
 @media (min-width: 600px) {
   .hero {
     grid-template-columns: 1.1fr .9fr;
@@ -279,7 +237,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* Show nav inline on tablets and up */
   .hamburger { display: none; }
   .site-nav {
     position: static; display: block; background: transparent; border: 0; padding: 0; box-shadow: none;
@@ -289,8 +246,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .hamburger:focus-visi
   }
   .site-nav a { padding: .5rem .7rem; }
 }
-
-/* ≥ 900px (laptops/desktops) */
 @media (min-width: 900px) {
   .product-grid {
     grid-template-columns: repeat(4, 1fr);
