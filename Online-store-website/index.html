@@ -4,45 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nova – Modern Store</title>
-
-  <!--
-    Project: Responsive Store Landing Page
-    Author: ChatGPT (for the user)
-    Notes:
-      - Clean, commented, accessible HTML structure
-      - Mobile‑first responsive CSS in styles.css
-      - Header with navigation, Product section (4+ cards), Footer
-      - Uses semantic tags and aria attributes
-  -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Logo -->
       <a class="logo" href="#top" aria-label="Nova Home">
-        <!-- Simple SVG logo for visual polish, no external libs -->
         <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" fill="currentColor" opacity="0.12"></path>
           <path d="M12 4l7 3.89v7.96L12 20l-7-4.15V7.89L12 4z" fill="currentColor"></path>
         </svg>
         <span class="logo-text">Nova</span>
       </a>
-
-      <!-- Mobile nav toggle (checkbox hack, no JS required) -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
       <label for="nav-toggle" class="hamburger" aria-hidden="true">
         <span></span><span></span><span></span>
       </label>
-
-      <!-- Navigation -->
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#products">Products</a></li>
@@ -52,8 +32,6 @@
         </ul>
       </nav>
     </div>
-
-    <!-- Optional hero inside header for visual appeal -->
     <section class="hero container">
       <div class="hero-text">
         <h1>Your Everyday Essentials, Reimagined</h1>
@@ -64,23 +42,17 @@
         </div>
       </div>
       <figure class="hero-art" aria-hidden="true">
-        <!-- Placeholder image (royalty‑free placeholder service). Replace with real hero later. -->
         <img src="./online store cover picture.jpg" alt="online store cover picture" loading="lazy">
       </figure>
     </section>
   </header>
-
   <main id="top">
-    <!-- ===== Product Section ===== -->
     <section id="products" class="products-section container">
       <header class="section-head">
         <h2>Featured Products</h2>
         <p class="muted">Carefully selected bestsellers. Tap any card to learn more.</p>
       </header>
-
-      <!-- Product grid: minimum 4 cards -->
       <div class="product-grid">
-        <!-- Product Card 1 -->
         <article class="product-card">
           <a class="product-media" href="#" aria-label="View Minimal Daypack">
             <img src="./Minimal Daypack.jpg" alt="Minimal Daypack" loading="lazy">
@@ -93,8 +65,6 @@
             <a href="#" class="btn btn-primary" aria-label="Shop Minimal Daypack now">Shop Now</a>
           </div>
         </article>
-
-        <!-- Product Card 2 -->
         <article class="product-card">
           <a class="product-media" href="#" aria-label="View Everyday Bottle">
             <img src="./daily bottle.webp" alt="Everyday Bottle" loading="lazy">
@@ -107,8 +77,6 @@
             <a href="#" class="btn btn-primary" aria-label="Shop Everyday Bottle now">Shop Now</a>
           </div>
         </article>
-
-        <!-- Product Card 3 -->
         <article class="product-card">
           <a class="product-media" href="#" aria-label="View Compact Wallet">
             <img src="./Compact Wallet.webp" alt="Compact Wallet" loading="lazy">
@@ -121,8 +89,6 @@
             <a href="#" class="btn btn-primary" aria-label="Shop Compact Wallet now">Shop Now</a>
           </div>
         </article>
-
-        <!-- Product Card 4 -->
         <article class="product-card">
           <a class="product-media" href="#" aria-label="View Wireless Buds">
             <img src="./Wireless Buds.jpg" alt="Wireless Buds" loading="lazy">
@@ -137,8 +103,6 @@
         </article>
       </div>
     </section>
-
-    <!-- ===== About (placeholder content per requirements) ===== -->
     <section id="about" class="about-section container">
       <header class="section-head">
         <h2>About Nova</h2>
@@ -157,8 +121,6 @@
       </div>
     </section>
   </main>
-
-  <!-- ===== Footer ===== -->
   <footer id="contact" class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
