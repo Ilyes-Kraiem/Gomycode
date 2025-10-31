@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Featured Products</h1>
+
+    <button id="theme-toggle"
+            class="btn-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Toggle theme">
+      <span class="sun" aria-hidden="true">☀️</span>
+      <span class="moon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="gallery" aria-label="Product gallery">
+      <article class="card fade-in" style="--i:0">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1517059224940-d4af9eec41e5?q=80&w=1200&auto=format&fit=crop"
+               alt="Matte black wireless headphones" />
+        </div>
+        <div class="card-body">
+          <h2 class="title">Aural One Headphones</h2>
+          <p class="desc">Active noise canceling, 30h battery, USB-C fast charge.</p>
+          <div class="meta">
+            <span class="price">$149</span>
+            <button class="btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="card fade-in" style="--i:1">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
+               alt="Lightweight running shoes in coral" />
+        </div>
+        <div class="card-body">
+          <h2 class="title">Stride Pro Runners</h2>
+          <p class="desc">Breathable knit, cloud foam midsole, road & gym ready.</p>
+          <div class="meta">
+            <span class="price">$119</span>
+            <button class="btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="card fade-in" style="--i:2">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop"
+               alt="Smartwatch with sport band showing digital dial" />
+        </div>
+        <div class="card-body">
+          <h2 class="title">Pulse Watch S</h2>
+          <p class="desc">AMOLED display, 5-day battery, GPS, health tracking.</p>
+          <div class="meta">
+            <span class="price">$199</span>
+            <button class="btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Your Brand</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
