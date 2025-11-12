@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Gomycode/my-react-bootstrap-app/static/css/main.51efb7cb.css",
+    "main.js": "/Gomycode/my-react-bootstrap-app/static/js/main.d8a7bdde.js",
+    "static/js/453.64f5b747.chunk.js": "/Gomycode/my-react-bootstrap-app/static/js/453.64f5b747.chunk.js",
+    "index.html": "/Gomycode/my-react-bootstrap-app/index.html",
+    "main.51efb7cb.css.map": "/Gomycode/my-react-bootstrap-app/static/css/main.51efb7cb.css.map",
+    "main.d8a7bdde.js.map": "/Gomycode/my-react-bootstrap-app/static/js/main.d8a7bdde.js.map",
+    "453.64f5b747.chunk.js.map": "/Gomycode/my-react-bootstrap-app/static/js/453.64f5b747.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51efb7cb.css",
+    "static/js/main.d8a7bdde.js"
+  ]
+}
